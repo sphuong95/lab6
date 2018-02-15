@@ -27,11 +27,13 @@ function addProjectDetails(e) {
 	var idNumber = projectID.substr('project'.length);
 
 	console.log("User clicked on project " + idNumber);
-	$.get("/project/" + idNumber, callBack); 
+	$.get("https://lab6-sphuong.herokuapp.com/project/" + idNumber, callBack); 
 }
 
 
 function callBack(result) {
+	console.log(result.image);
+	console.log("#"+result.id+" "+".details");
 
 	var projectHTML = '<img src="' + result['image'] + '" class="detailsImage">' + 
 		'<p>' + result['title'] + '</p>' +
