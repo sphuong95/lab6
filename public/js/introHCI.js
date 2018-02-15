@@ -40,7 +40,7 @@ function callBack(result) {
 		'<p><small>' + result['date'] + '</p>' + 
 		'<p>' + result['summary'] + '</small></p>';
 
-	var projectID = '#project' + result.id + '.details';
+	var projectID = '#project' + result['id'] + ' .details';
 
 	$(projectID).html(projectHTML);
 }
